@@ -25,11 +25,9 @@ void grep(char* needle, char* filename){
   while ((read = getline(&haystack, &haystack_size, file)) != -1) {
     char* ptr = haystack;
     ptr[strlen(ptr)-1]='\0';
-    printf("%d\n",strlen(ptr));
     clean(ptr);
-    printf("%d\n",strlen(ptr));
     char *token;
-    int column=0;
+    
     token=strtok(ptr," ");
     while( token != NULL ) {
       //printf("%s",token);
